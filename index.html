@@ -1,84 +1,188 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nizhny Guide</title>
 
-    <link rel="stylesheet" href="style.css">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nizhny Guide</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<header class="hero">
+<div class="wave"></div>
 
-    <h1>🏙 Nizhny Guide</h1>
+<div class="wave2"></div>
 
-    <p class="date">
-        28–30 июля 2026
-    </p>
+<header>
 
-    <p class="subtitle">
-        Персональный гид по Нижнему Новгороду
-    </p>
+<div class="hero">
 
-    <button id="startButton">
-        Начать путешествие
-    </button>
+<h1>Nizhny Guide</h1>
+
+<p>
+
+28–30 июля 2026
+
+<br>
+
+Персональный гид по Нижнему Новгороду
+
+</p>
+
+</div>
 
 </header>
 
-<section class="info">
+<section class="cards">
 
-    <div class="info-card">
+<div class="card">
 
-        <h2>🚆 Прибытие</h2>
+<div class="badge">
+Сегодня
+</div>
 
-        <p><strong>10:20</strong></p>
+<div class="day">
+28 июля
+</div>
 
-        <p>Московский вокзал</p>
+<div class="time">
+🚄 10:20
+</div>
 
-    </div>
+<div class="place">
+Прибытие на Московский вокзал
+</div>
 
-    <div class="info-card">
+<a class="button">
 
-        <h2>🏠 Заселение</h2>
+Начать маршрут
 
-        <p><strong>14:00</strong></p>
+</a>
 
-        <p>ул. Максима Горького, 23А</p>
+</div>
 
-    </div>
+<div class="card">
 
-</section>
+<div class="badge">
+Маршруты
+</div>
 
-<section class="menu">
+<div class="day">
+Выберите день
+</div>
 
-    <div class="card">📅 День 1</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;">
 
-    <div class="card">🌿 День 2</div>
+<button class="dayButton active" onclick="showDay('day1',this)">
+28 июля
+</button>
 
-    <div class="card">🌇 День 3</div>
+<button class="dayButton" onclick="showDay('day2',this)">
+29 июля
+</button>
 
-    <div class="card">☕ Кофейни</div>
+<button class="dayButton" onclick="showDay('day3',this)">
+30 июля
+</button>
 
-    <div class="card">🥃 Настойки</div>
+</div>
 
-    <div class="card">🍸 Бары</div>
+<div id="day1" class="route">
 
-    <div class="card">🗺 Карта</div>
+<h2>28 июля</h2>
 
-    <div class="card">📷 Фото</div>
+<div class="timeline">
+
+<div class="event">
+
+<div class="hour">
+10:20
+</div>
+
+<div>
+
+<h3>🚄 Московский вокзал</h3>
+
+<p>Прибытие.</p>
+
+</div>
+
+</div>
+
+<div class="event">
+
+<div class="hour">
+11:00
+</div>
+
+<div>
+
+<h3>☕ Завтрак</h3>
+
+<p>Кофейня «Темп».</p>
+
+</div>
+
+</div>
+
+<div class="event">
+
+<div class="hour">
+14:00
+</div>
+
+<div>
+
+<h3>🏠 Заселение</h3>
+
+<p>
+ул. Максима Горького, 23А
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="day2" class="route" style="display:none">
+
+<h2>29 июля</h2>
+
+<p>Поездка на Светлояр.</p>
+
+</div>
+
+<div id="day3" class="route" style="display:none">
+
+<h2>30 июля</h2>
+
+<p>Прогулка перед поездом.</p>
+
+</div>
 
 </section>
 
 <footer>
 
-Nizhny Guide • v1.0
+Создано специально для путешествия
 
 </footer>
 
 <script src="app.js"></script>
 
 </body>
+
 </html>
